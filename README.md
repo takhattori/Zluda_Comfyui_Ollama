@@ -47,16 +47,7 @@ ComfyUI Manager:git clone https://github.com/ltdrdata/ComfyUI-Manager.git
  - KJNodes for ComfyUI(visualise node)
  - comfyui-portrait-master
  - WD 1.4 tagger (img to txt)
-
  - rgthree 
- 
-
-●rembg
-conda create -n rembg   (Pythonは標準=最新)
-pip install rembg[cli]
-example;
-  rembg i file_A file_B
-  rembg p folder_A folder_B
 
 ●仮想環境の削除
 conda remove -n "xxxxx" --all
@@ -100,3 +91,10 @@ conda remove -n "xxxxx" --all
 - ollamaの0.1.34版が動作確認済
 - ollamaインストールフォルダ(appData/local/programs/ollama)にzludaのcublas.dll->cublas64_11.dllで上書き
 
+
+●rembg
+conda create -n rembg   (Pythonは標準=最新)
+pip install rembg[cli]
+example;
+  rembg i file_A file_B
+  rembg p folder_A folder_B
