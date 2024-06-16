@@ -1,5 +1,6 @@
 # Zluda_Comfyui_Ollama
 
+<h2>global python setup</h2>
 1.PYTHON:add pathにチェックを入れること
     2024.5.23 : Python 3.12.3
 2.MINICONDA3 for Python 3.12
@@ -8,12 +9,16 @@
 ●CONFYUI-ZLUDAのインストール
 
 - VC(VC_redist.x64.exe)
-- AMD-Software-PRO-Edition-23.Q4-Win10-Win11-For-HIP.exe
+- ```AMD-Software-PRO-Edition-23.Q4-Win10-Win11-For-HIP.exe```
    Driverはインストールしない
    system pathに.....bin\を追加
  ComfyuiのRe-installはここから↓ condaを使うのでinstall.batは使わない
-- StableDiffusionは配下で git clone https://github.com/patientx/ComfyUI-Zluda
-- 仮想環境 conda create -n zluda python=3.10.11  (3.10.11指定) or 3.11
+- StableDiffusionは配下で
+  ```bash
+  git clone https://github.com/patientx/ComfyUI-Zluda
+  ```
+- 仮想環境 ```conda create -n zluda python=3.10.11```  (3.10.11指定) or 3.11
+```
 - conda activate zluda
 - pip install -r requirements.txt
 - pip uninstall torch torchvision torchaudio -y
@@ -28,21 +33,21 @@
    copy zluda\cublas.dll C:\user_data\miniconda3\envs\zluda\Lib\site-packages\torch\lib\cublas64_11.dll /y
    copy zluda\cusparse.dll C:\user_data\miniconda3\envs\zluda\Lib\site-packages\torch\lib\cusparse64_11.dll /y
    copy zluda\nvrtc.dll C:\user_data\miniconda3\envs\zluda\Lib\site-packages\torch\lib\nvrtc64_112_0.dll /y
-
+```
 
 プロンプトの文字見やすく
+```
 .comfy-multiline-input {
   font-family: "Fira Code";
   font-size: 12px;
 }
-
+```
 ---
 ./custom_nodesにカスタムノードをインストール
-ComfyUI Manager:git clone https://github.com/ltdrdata/ComfyUI-Manager.git
-->ComfyUI-Custom-Scripts
-
+```ComfyUI Manager:git clone https://github.com/ltdrdata/ComfyUI-Manager.git```
 
 カスタムノード
+ - ComfyUI-Custom-Scripts
  - Comfuyi Impact Pack(Face)
  - Comfyui Omspire pack
  - ComfyUI's ControlNet Auxiliary Preprocessors(Control Net)
@@ -60,16 +65,16 @@ ComfyUI Manager:git clone https://github.com/ltdrdata/ComfyUI-Manager.git
  - rgthree 
 
 ファイル保存場所
- %date:yy%%date:MM%%date:dd%/ComfyUI
+```%date:yy%%date:MM%%date:dd%/ComfyUI```
 とすると年月日フォルダにComfyUI_xxxxx.pngとして保存する
 ●仮想環境の削除
-conda remove -n "xxxxx" --all
+```conda remove -n "xxxxx" --all```
 
 
 ●ollamaのインストール
 
 - ollamaの0.1.32版が動作確認済
-- ollamaインストールフォルダ(appData/local/programs/ollama)にzludaのcublas.dll->cublas64_11.dllで上書き
+- ollamaインストールフォルダ(appData/local/programs/ollama)に```zludaのcublas.dll```->```cublas64_11.dll```で上書き
 
 
 ●rembg
