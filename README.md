@@ -3,10 +3,12 @@
 <h2>global python setup</h2>
 1.PYTHON:add pathにチェックを入れること
     2024.5.23 : Python 3.12.3
+
 2.MINICONDA3 for Python 3.12
     2024.5.23 : conda 24.4.0
 
-●CONFYUI-ZLUDAのインストール
+
+<h2>CONFYUI-ZLUDAのインストール</h2>
 
 - VC(VC_redist.x64.exe)
 - ```AMD-Software-PRO-Edition-23.Q4-Win10-Win11-For-HIP.exe```
