@@ -68,7 +68,7 @@ conda remove -n "xxxxx" --all
 
 ●ollamaのインストール
 
-- ollamaの0.1.34版が動作確認済
+- ollamaの0.1.32版が動作確認済
 - ollamaインストールフォルダ(appData/local/programs/ollama)にzludaのcublas.dll->cublas64_11.dllで上書き
 
 
